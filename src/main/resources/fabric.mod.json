@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "oad2",
+	"version": "${version}",
+	"name": "OAD2",
+	"description": "Ores Above Diamonds 2",
+	"authors": [
+		"Squidsword"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/oad2/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"squidsword.oad2.Oad2"
+		],
+		"client": [
+			"squidsword.oad2.Oad2Client"
+		]
+	},
+	"mixins": [
+		"oad2.mixins.json",
+		{
+			"config": "oad2.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
